@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <link rel="stylesheet" type="text/css" href="css/signup.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function check()
+        {
+                <!-- 若<form>屬性name值為reg裡的文字方塊值為空字串，則顯示「未輸入姓名」 -->
+                if(reg.account.value == "") 
+                {
+                        alert("沒有輸入帳號");
+                }
+                <!-- 若<form>屬性name值為reg裡的文字方塊與下拉式選單值為空字串或是沒有選擇月或日，則顯示「未輸入完整生日日期」 -->
+                else if(reg.password.value == "") 
+                {
+                        alert("沒有輸入密碼");
+                }
+                else reg.submit();
+        }
+
+        function signupShow() {
+            $('#signup').show()
+            $('#signup').css("opacity", "1")
+        }
+
+        function signupHide() {
+            $('#signup').css("opacity", "0")
+            $('#signup').hide()
+            $('input[name="account"]').val('')
+            $('input[name="password"]').val('')
+            $('select[name="identifier"] option').prop('selected', function() {
+                return this.defaultSelected;
+            })
+        }
+    </script>
+
+    <div id="navSection" style="position: fixed;">
+        <div id="navbar">
+            <div id="nav_logo">
+                <a>
+                    黏仔客運
+                </a>
+            </div>
+            <div id="nav">
+                <ul>
+                    <li>
+                        <a href="index.html" type="button" id="but">
+                            首頁
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account/tickets.php">
+                            查看票種
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="login">
+                <form action="account/login.php" method="post">
+                    帳號：<input type="text" name="account"/>
+                    密碼：<input type="text" name="password"/>
+                    <input type="submit" name="submit" value="登入" />
+                    <input type="button" onclick="signupShow()" value="註冊" />
+                    <!-- <input type="reset" value="清除" /> -->
+                    <!-- <input type="button" onclick="javascript:location.href='tickets.php'" value="查看所有票" /> -->
+                
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="slider">
+        <ul>
+            <li class="slide1">
+                <div class="slideimg"></div>
+            </li>
+            <li class="slide2">
+                <div class="slideimg"></div>
+            </li>
+            <li class="slide3">
+                <div class="slideimg"></div>
+            </li>
+            <li class="slide4">
+                <div class="slideimg"></div>
+            </li>
+            <li class="slide1">
+                <div class="slideimg"></div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="signup" style="display: none; opacity: 0;">
+        <form name="reg" action="account/insert_account.php" method="post">
+            <h1> 註冊 </h1>
+            <p> 帳號 </p> <input type="text" name="account">
+            <p> 密碼 </p> <input type="text" name="password">
+            <select name="identifier">
+                <option value="client" selected="selected">client</option>
+                <option value="administrator">administrator</option>
+            </select>
+            <div id="signupBtn">
+                <div id="check" onclick="check()" class="signBtn">
+                    <span> &#10004; </span>
+                </div>
+                <div id="cross" onclick="signupHide()" class="signBtn">
+                    <span> &#10008; </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

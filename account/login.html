@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <title>
+        登入/註冊
+    </title>
+</head>
+
+<body>
+    <div id="content">
+        <div id="right_content">
+        <div id="fun">
+        註冊即可獲得小黏仔Line貼圖乙份哦！
+        </div>
+        </div>
+            <div id="left_content">
+            <div id="formcon">
+                <form action="login.php" method="post">
+                <div id="title">黏仔客運會員登入
+                </div>
+                    <input id="nborder" type="text" name="account" placeholder="帳號">
+                    <br/> 
+                    <input id="nborder" type="password" name="password" placeholder="密碼">
+                    <br>
+                      <input id="butsty_log" type="submit" name="submit" value="登入">
+                    <div id="butcon">
+                    <input id="butsty" type="button" onclick="javascript:location.href='insert_account.html'" value="註冊"></input>
+                    <input id="butsty" type="reset" value="清除">
+                    <input id="butsty" type="button" onclick="javascript:location.href='tickets.php'" value="查看所有票"></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

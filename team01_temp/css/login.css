@@ -1,0 +1,78 @@
+*{
+	margin:0;
+}
+#content{
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+}
+#title{
+	text-align: center;
+	margin-left: -15px;
+	font-family: "Microsoft JhengHei"; 
+}
+#right_content{
+	display: flex;
+	align-items:flex-end;
+		font-family: "Microsoft JhengHei";
+	margin:5%;
+width: 40vw;
+background: url(../img/xiao.jpg) no-repeat;
+}
+#nborder{
+	font-family: "Microsoft JhengHei"; 
+	margin-top: 6%;
+	font-size: 1em;
+	border:1px solid black;
+	border-radius: 8px;
+	width:30vw;
+	height: 2em;
+	margin-bottom: 15%;
+	outline:none; 
+}
+#left_content{
+	font-size: 3em;
+	display: flex;
+	align-items: center;
+width:60vw;
+height: 100vh;
+}
+#butcon{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+#butsty{
+	background-color: #3083ff; 
+	border-radius: 8px;
+	width: 6vw;
+	font-family: "Microsoft JhengHei"; 
+	font-weight: 600;
+}
+#butsty:hover{
+ background-color: #15345f;
+
+}
+
+#fun{
+	font-weight: 600;
+	font-size: 1.5em;
+}
+#butsty_log{
+	background-color: #3083ff; 
+	border-radius: 8px;
+	width: 97%;
+	margin-bottom: 5%;
+	height: 10vh;
+	font-family: "Microsoft JhengHei"; 
+	font-weight: 600;
+}
+#butsty_log:hover{
+background-color: #15345f; 
+}
+#formcon
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

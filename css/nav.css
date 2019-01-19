@@ -1,0 +1,232 @@
+/* nav */
+* {
+  margin: 0px auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Microsoft JhengHei';
+}
+
+#navSection {
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #444;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+#navSection #navbar {
+  width: 1170px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#navSection #navbar:after {
+  content: '';
+  clear: both;
+}
+
+#navSection #navbar #nav_logo {
+  float: left;
+  margin: 30px 10px;
+}
+
+#navSection #navbar #nav_logo a {
+  display: block;
+  background: url("../img/xiao3.png") no-repeat;
+  background-size: 185px 40px;
+  width: 185px;
+  height: 40px;
+  text-decoration: none;
+  text-indent: -9999px;
+}
+
+#navSection #navbar #nav {
+  float: left;
+  margin: 34px 10px;
+}
+
+#navSection #navbar #nav ul {
+  list-style-type: none;
+}
+
+#navSection #navbar #nav ul li {
+  display: inline-block;
+}
+
+#navSection #navbar #nav ul li a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navSection #navbar #nav ul li a:hover {
+  color: #c8a664;
+}
+
+#navSection #navbar #login {
+  float: right;
+  margin: 32px 10px;
+  color: #fff;
+}
+
+#navSection #navbar #login form {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+#navSection #navbar #login form input {
+  outline: none;
+}
+
+#navSection #navbar #login form input[type='text'] {
+  width: 120px;
+  margin-right: 5px;
+  padding: 1px 5px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+#navSection #navbar #login form input[type='button'],
+#navSection #navbar #login form input[type='submit'],
+#navSection #navbar #login form input[type='reset'] {
+  margin: 0 2px;
+  padding: 1px 8px;
+  background: #444;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navSection #navbar #login form input[type='button']:hover,
+#navSection #navbar #login form input[type='submit']:hover,
+#navSection #navbar #login form input[type='reset']:hover {
+  background: #fff;
+  color: #444;
+  font-weight: 900;
+}
+
+#navSection #navbar #login #logout {
+  padding: 1px 6px;
+  background: #444;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#navSection #navbar #login #logout:hover {
+  background: #fff;
+  color: #444;
+  font-weight: 900;
+}
+
+/*
+  #navSection
+    #navbar
+      #nav_logo
+        a
+          img
+      #nav
+        ul
+          li
+          a
+      #login */
+#navi {
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+    font-weight: lighter;
+    max-width: 100%;
+    display: flex;
+    vertical-align: 0;
+    position:relative;
+    margin-top:-20px;
+}
+
+#navi ul {
+    
+    margin: auto;
+    display: inline-block;
+}
+
+#navi li {
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+     font-size: 20px;
+    font-family: 細明體;
+    list-style-type: none;
+    float: left;
+    margin: 0em 0em;
+}
+
+    #navi li a {
+        padding: 0em 2em;
+        vertical-align: middle;
+        align-items: center;
+        text-align: center;
+        display: block;
+        float: left;
+        text-decoration: none;
+        font-family: Microsoft JhengHei;
+        color: #fff;
+          -webkit-transition:color 0.3s;
+    transition: color 0.3s;
+    }
+    #navi li :hover {
+        display: block;
+        color: #c8a664;
+    }
+    #navi li ul {
+        font-family:"Microsoft JhengHei";
+        font-size: 18px;
+        display: none;
+        margin: 0 auto;
+        position: absolute;
+    }
+#navi ul li ul li{
+  font-size:15px;
+text-align: center;
+vertical-align:middle;
+line-height:36px;
+background-color: #444;
+width:140px;
+height: 36px;
+right: 10px;
+    clear:both;
+    margin: 0 auto;
+    padding: 0 auto;
+list-style-type: none;
+  display: block; 
+}
+#navi ul li:hover ul {
+    display: block;
+}
+#navi ul li ul li a {
+  font-size: 15px;
+    display:block !important;
+} 
+#navi li a :hover > ul {
+    display: block;
+}

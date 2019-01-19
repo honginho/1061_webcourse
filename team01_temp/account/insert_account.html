@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>
+		帳號註冊
+	</title>
+</head>
+<SCRIPT type="text/javascript">
+        function check()
+        {
+                <!-- 若<form>屬性name值為reg裡的文字方塊值為空字串，則顯示「未輸入姓名」 -->
+                if(reg.account.value == "") 
+                {
+                        alert("未輸入帳號");
+                }
+                <!-- 若<form>屬性name值為reg裡的文字方塊與下拉式選單值為空字串或是沒有選擇月或日，則顯示「未輸入完整生日日期」 -->
+                else if(reg.password.value == "") 
+                {
+                        alert("未輸入密碼");
+                }
+                else reg.submit();
+         }
+</SCRIPT>
+<body>
+<div style="width:100% ;height: 100%;display: flex;">
+<form name="reg" action="insert_account.php" method="post">
+帳號:<input type="text" name="account"  placeholder="必填"><br/>
+密碼:<input type="text" name="password"  placeholder="必填"><br/>
+<select name="identifier">
+　<option value="client">client</option>
+　<option value="administrator">administrator</option>
+</select>
+<br>
+<input type="button" value="註冊" onClick="check()" />
+<input type="reset" value="清除">
+<input type ="button" onclick="javascript:location.href='login.html'" value="登入"></input>
+</form>
+</div>
+</body>
+</html>
